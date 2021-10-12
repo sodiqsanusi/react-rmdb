@@ -17,7 +17,7 @@ export const LogoImg = styled.div`
   width: 40%;
 
   @media (min-width: 700px) {
-    width: 10%;
+    width: 20%;
   }
 `;
 
