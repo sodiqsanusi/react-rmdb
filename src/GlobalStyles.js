@@ -2,7 +2,7 @@ import { createGlobalStyle} from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 :root{
-  --maxWidth: 1280px;
+  --maxWidth: 1200px;
   --white: #fff;
   --lightGrey: #eee;
   --medGrey: #353535;
@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
   --fontSuperBig: 2.5rem;
   --fontBig: 1.5rem;
   --fontMed: 1.2rem;
-  --fontSmall: 1rem,
+  --fontSmall: 1rem;
 }
 
 *{
