@@ -1,18 +1,15 @@
-
-//IMPORTING THE REACT HOOKS THAT WILL BE USED
-import { useState } from "react";
-// IMPORTING IMAGE URLS ENDPOINTS FROM THE API HCONFIG FILE
-import { POSTER_SIZE,BACKDROP_SIZE, IMAGE_BASE_URL  } from "../../APIFiles/config";
-// IMPORTING A FALLBACK IMAGE FOR THE HOMEPAGE
-import NoImage from '../../images/no_image.jpg'
-
+import useFetch from "../../hooks/useFetch";
+import { trendingMovies_URL } from "../../APIFiles/APIKeys"; 
 
 const HomePage = () => {
+
+  const { data: allMovies, loading, error} = useFetch(trendingMovies_URL);
   
+
   return ( 
-     <main>
-       hii
-     </main>
+    <div>
+      {allMovies && console.log(allMovies)}
+    </div>
    );
 }
  
