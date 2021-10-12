@@ -1,5 +1,8 @@
+// IMPORTING THE USEFETCH CUSTOM HOOK TO GET EXTERNAL DATA
 import useFetch from "../../hooks/useFetch";
+// IMPORTING THE API'S VALUES FROM A REUSABLE .JS FILE
 import { trendingMovies_URL } from "../../APIFiles/APIKeys"; 
+import HeroImage from "./HeroImage";
 
 const HomePage = () => {
 
@@ -7,9 +10,9 @@ const HomePage = () => {
   
 
   return ( 
-    <div>
-      {allMovies && console.log(allMovies)}
-    </div>
+    <>
+     { allMovies && <HeroImage allMovies={allMovies}/>}
+    </>
    );
 }
  

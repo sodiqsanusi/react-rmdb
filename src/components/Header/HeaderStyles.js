@@ -16,7 +16,7 @@ export const Content = styled.div`
 export const LogoImg = styled.div`
   width: 40%;
 
-  @media (min-width: 700px) {
+  @media (min-width: 615px) {
     width: 20%;
   }
 `;
@@ -24,7 +24,7 @@ export const LogoImg = styled.div`
 export const TMDBLogoImg = styled.div`
   width: 30%;
 
-  @media (min-width: 700px) {
+  @media (min-width: 615px) {
     width: 10%;
   }
 `;
