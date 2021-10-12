@@ -19,9 +19,10 @@ export const Wrapper= styled.section`
    }
 `;
 
-export const HeroTextWrap = styled.div`
+export const HeroTextWrap = styled.article`
   max-width: var(--maxWidth);
-  padding: 10% 30% 2em 10%;
+  padding: 10% 20% 2em 10%;
+  margin: 0 auto;
   h1{
     font-size: var(--fontSuperBig);
     margin-bottom: .5em;
