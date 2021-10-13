@@ -17,9 +17,7 @@ const App = () => {
         <GlobalStyles />
         <Header />
         <Switch>
-          <Route exact path='/'>
-            <HomePage />
-          </Route>
+          <Route exact path='/' component={HomePage} /> 
           <Route exact path ='/search/:query' component={SearchPage} />
         </Switch>
       </main>

@@ -15,7 +15,7 @@ const SearchedMoviesGrid = ({searchedMovies, query}) => {
           <MovieThumbnails
           key={movie.id}>
             <img
-            src={ movie.poster_path? getImageURL + movie.poster_path : noImage} 
+            src={ movie.poster_path ? getImageURL + movie.poster_path : noImage} 
             alt={movie.name ? movie.name : movie.title} />
           </MovieThumbnails>
         )

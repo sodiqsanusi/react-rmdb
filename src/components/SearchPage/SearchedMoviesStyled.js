@@ -42,3 +42,22 @@ export const MovieThumbnails = styled.article`
   }
    
 `
+
+export const ContentButton = styled.button`
+   background-color: ${({adultContent}) => !adultContent ? '#ffa31a' : 'var(--darkGrey)'};
+   border: none;
+   outline: none;
+   margin: 1em 10%;
+   border-radius: 40px;
+   color: ${({adultContent}) => !adultContent ? '#1b1b1b' : 'var(--white)'};
+   padding: .5em 2em;
+   font-size: var(--fontMed);
+
+  
+
+   :hover,
+   :focus{
+     background-color: ${({adultContent}) => !adultContent ? '#ffa31abb' : 'var(--medGrey)'};
+     transform: scale(0.98);
+   }
+`;

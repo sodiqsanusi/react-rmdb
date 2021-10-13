@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import searchIcon from '../../../images/search-icon.svg'
-import { Content, Wrapper } from './SearchBarStyled';
+import { Content, SpanButton, Wrapper } from './SearchBarStyled';
 
 const SearchBar = () => {
 
@@ -16,9 +16,11 @@ const SearchBar = () => {
   return ( 
     <Wrapper htmlFor="searchQuery">
       <Content onSubmit={handleQuery}>
-        <img src={searchIcon} alt="" />
+        <SpanButton onClick={() => handleQuery}><img src={searchIcon} alt="" /></SpanButton>
         <input
          id='searchQuery'
+         required
+         autoComplete='off'
          type='search'
          placeholder='Search for a movie, actor or tv show'
          value={query}
