@@ -1,4 +1,5 @@
 import { getImageURL } from "../../../APIFiles/APIKeys";
+import { Link } from "react-router-dom";
 import { HeroTextWrap, Wrapper } from "./HeroImageStyles";
 
 const HeroImage = ({allMovies}) => {
@@ -8,10 +9,12 @@ const HeroImage = ({allMovies}) => {
 
   return ( 
     <Wrapper bgImage={bgImage}>
+      <Link to={`/movie/${movie.id}`}>
       <HeroTextWrap>
-        <h1>{ movie.name ? movie.name : movie.title}</h1>
+       <h1>{ movie.name ? movie.name : movie.title}</h1> 
         <p>{movie.overview}</p>
       </HeroTextWrap>
+      </Link>
     </Wrapper>
    );
 }

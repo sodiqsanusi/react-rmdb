@@ -9,6 +9,10 @@ export const Wrapper= styled.section`
    animation: heroImg 1s linear;
    position: relative;
 
+   a{
+    text-decoration: none;
+  }
+
    @keyframes heroImg {
      0%{
        opacity: 0;

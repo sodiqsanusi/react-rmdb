@@ -7,6 +7,7 @@ import GlobalStyles from './GlobalStyles'
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import SearchPage from './components/SearchPage';
+import SingleMovie from './components/SingleMovie';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={HomePage} /> 
           <Route exact path ='/search/:query' component={SearchPage} />
+          <Route exact path='/movie/:id' component={SingleMovie}/>
         </Switch>
       </main>
     </Router>
