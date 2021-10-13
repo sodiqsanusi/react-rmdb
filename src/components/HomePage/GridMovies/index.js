@@ -1,6 +1,7 @@
 import { Content, MovieThumbnails, Wrapper } from "./GridMoviesStyled";
 import { getImageURL } from "../../../APIFiles/APIKeys";
 import noImage from '../../../images/no_image.jpg'
+import NavigatePages from './NavigatePages'
 
 
 const GridMovies = ({allMovies}) => {
@@ -22,6 +23,8 @@ const GridMovies = ({allMovies}) => {
         )
       )}
    </Content>
+  
+   <NavigatePages />
   </Wrapper> );
 }
  

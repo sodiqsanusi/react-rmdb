@@ -8,6 +8,13 @@ export const Wrapper = styled.div`
    padding: .5em 2em;
 `;
 
+export const SpanButton = styled.button`
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  margin: 0 auto;
+`
+
 export const Content = styled.form`
   position: relative;
   display: flex;

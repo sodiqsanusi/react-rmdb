@@ -6,18 +6,21 @@ import HeroImage from "./HeroImage";
 import GridMovies from "./GridMovies";
 import Spinner from "./Spinner";
 import SearchBar from "./SearchBar";
+import { useContext } from "react";
+import { globalContext } from "../../globalstates/globalContext";
 
 const HomePage = () => {
 
-  const { data: allMovies, loading, error} = useFetch(trendingMovies_URL);
+  const { page} = useContext(globalContext);
+  const { data: allMovies, loading, error} = useFetch(`${trendingMovies_URL}&page=${page}`);
   
 
   return ( 
     <>
      { loading && <Spinner />}
-     { allMovies && <HeroImage allMovies={allMovies}/>}
-     { allMovies && <SearchBar />}
-     { allMovies && <GridMovies allMovies={allMovies}/>}
+     { allMovies && !loading && <HeroImage allMovies={allMovies}/>}
+     { allMovies && !loading && <SearchBar />}
+     { allMovies && !loading && <GridMovies allMovies={allMovies}/>}
     </>
    );
 }
