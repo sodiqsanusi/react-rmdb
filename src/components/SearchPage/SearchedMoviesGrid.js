@@ -1,4 +1,5 @@
 import { Content, MovieThumbnails, Wrapper } from "./SearchedMoviesStyled";
+import { Link } from "react-router-dom";
 import { getImageURL } from "../../APIFiles/APIKeys";
 import noImage from '../../images/no_image.jpg'
 
@@ -12,12 +13,14 @@ const SearchedMoviesGrid = ({searchedMovies, query}) => {
     <Content>
       {movies.map(
         (movie) => (
-          <MovieThumbnails
-          key={movie.id}>
+          <Link to={movie.media_type === 'movie' ? `/movie/${movie.id}`: `/tv/${movie.id}`} key={movie.id}>
+          
+          <MovieThumbnails>
             <img
             src={ movie.poster_path ? getImageURL + movie.poster_path : noImage} 
             alt={movie.name ? movie.name : movie.title} />
           </MovieThumbnails>
+          </Link>
         )
       )}
    </Content>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// THE USEHISTORY REACT HOOK IS USED FOR GOING THROUGH PAGES AUTOMATICALLY
 import { useHistory } from 'react-router';
 import searchIcon from '../../../images/search-icon.svg'
 import { Content, SpanButton, Wrapper } from './SearchBarStyled';

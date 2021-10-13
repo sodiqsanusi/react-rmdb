@@ -21,6 +21,7 @@ export const Content = styled.form`
   background-color: var(--medGrey);
   width: 100%;
   max-width: var(--maxWidth);
+  margin: 0 auto;
   border-radius: 40px;
   justify-content: space-between;
   padding: .5em;
