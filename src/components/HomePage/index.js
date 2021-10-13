@@ -4,6 +4,8 @@ import useFetch from "../../hooks/useFetch";
 import { trendingMovies_URL } from "../../APIFiles/APIKeys"; 
 import HeroImage from "./HeroImage";
 import GridMovies from "./GridMovies";
+import Spinner from "./Spinner";
+import SearchBar from "./SearchBar";
 
 const HomePage = () => {
 
@@ -12,7 +14,9 @@ const HomePage = () => {
 
   return ( 
     <>
+     { loading && <Spinner />}
      { allMovies && <HeroImage allMovies={allMovies}/>}
+     { allMovies && <SearchBar />}
      { allMovies && <GridMovies allMovies={allMovies}/>}
     </>
    );
