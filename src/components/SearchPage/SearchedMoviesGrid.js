@@ -13,7 +13,7 @@ const SearchedMoviesGrid = ({searchedMovies, query}) => {
     <Content>
       {movies.map(
         (movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
+          <Link to={movie.media_type === 'movie' ? `/movie/${movie.id}`: `/tv/${movie.id}`} key={movie.id}>
           
           <MovieThumbnails>
             <img

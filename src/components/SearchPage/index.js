@@ -1,6 +1,7 @@
+// GETTING AN API FROM THE HELPER FILE SO I CAN MAKE SEARCH QUERIES.
 import { searchMultiURL } from "../../APIFiles/APIKeys";
 import useFetch from "../../hooks/useFetch";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import SearchedMoviesGrid from "./SearchedMoviesGrid";
 import Spinner from "../HomePage/Spinner";
 import SearchBar from "../HomePage/SearchBar";
@@ -12,7 +13,13 @@ const SearchPage = () => {
   const [adultContent, setAdultContent] = useState(false)
   const { query } = useParams();
   const {data: searchedMovies, loading, error} = useFetch(`${searchMultiURL}${adultContent}&query=${query}`);
-
+  const history = useHistory();
+  // TO REDIRECT TO THE 404 PAGE IF THERE IS A FETCH ERROR OR IF
+  // THE SEARCH QUERY HAS NO RESULT
+  if( (searchedMovies && searchedMovies.total_results === 0) || error ){
+    history.push('/404');
+  }
+   
   return (
     <>
     { searchedMovies && <SearchBar />}

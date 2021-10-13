@@ -1,12 +1,15 @@
 import { MainButton, SmallButton, SmallDiv, Wrapper } from "./NavigatePagesStyled";
+// IMPORTING A HOOK FROM REACT TO BE ABLE TO ACCESS GLOBAL CONTEXT,
+// ALSO IMPORTING THE GLOBAL CONTEXT ALSO.
 import { useContext } from "react";
 import { globalContext } from "../../../../globalstates/globalContext";
 
 
 const NavigatePages = () => {
 
+  // DESTRUCTURING OUT OUR NEEDED STATES FROM THE GLOBAL CONTEXT.
   const {page, setPage} = useContext(globalContext);
-
+  // AN OBJECT OF FUNCTIONS THAT SPECIFIES THE CHANGING OF PAGES.
   const changePage = {
     previous: () => setPage(page - 1),
     next: () => setPage(page + 1),
