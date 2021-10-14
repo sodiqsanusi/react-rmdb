@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
 import { Content, Wrapper, Text } from "./TVInfoBarStyled";
 
 
 const TVInfoBar = ({tv}) => {
-  console.log(tv);
 
   return ( 
     <Wrapper>
