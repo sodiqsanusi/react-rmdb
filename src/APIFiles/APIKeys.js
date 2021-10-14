@@ -1,5 +1,6 @@
 
-
+// THIS ARE HELPER FILES TO MAKE FETCHING DATA FROM TMDB MORE EASY
+// THEIR CONST NAMES ARE SELF-EXPLANATORY; I THINK
 export const API_URL = 'https://api.themoviedb.org/3/';
 export const API_KEY = process.env.REACT_APP_API_KEY;
 

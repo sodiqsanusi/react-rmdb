@@ -17,7 +17,7 @@ const App = () => {
 
   return(
     <Router>
-      <main id="app">
+      <>
         <GlobalStyles />
         <Header />
         <Switch>
@@ -27,7 +27,7 @@ const App = () => {
           <Route exact path='/tv/:id' component={SingleTV}/>
           <Route exact path='*' component={ Page404 }/>
         </Switch>
-      </main>
+      </>
     </Router>
   )
 }

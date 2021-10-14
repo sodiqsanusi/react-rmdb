@@ -24,7 +24,7 @@ const SearchPage = () => {
     <>
     { searchedMovies && <SearchBar />}
     { loading && <Spinner />}
-    { searchedMovies && <ContentButton adultContent={adultContent} onClick={() => setAdultContent(!adultContent)}>{adultContent ? 'Remove Adult Content' : 'Include Adult Content'} </ContentButton> }
+    { searchedMovies && <ContentButton adultContent={adultContent} onClick={() => setAdultContent(!adultContent)}>{adultContent ? 'Remove Adult Content From Search Results' : 'Include Adult Content In Search Results'} </ContentButton> }
     { searchedMovies && <SearchedMoviesGrid searchedMovies={searchedMovies} query={query}/> }
     </>
    );
