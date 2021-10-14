@@ -1,6 +1,6 @@
 import { getImageURL } from "../../../APIFiles/APIKeys";
 import noImage from '../../../images/no_image.jpg';
-import { Content, Wrapper, Text } from "../../SingleMovie/MovieInfo/MovieInfoStyled";
+import { Content, Wrapper, Text } from "./TVInfoStyled";
 
 const TVInfo = ({tv, TVCredits}) => {
   if (TVCredits) {
@@ -10,7 +10,6 @@ const TVInfo = ({tv, TVCredits}) => {
 
      var backdrop = `${getImageURL}${tv.backdrop_path}` ;
   }
-  console.log(producers)
 
 
   return ( 
@@ -28,7 +27,7 @@ const TVInfo = ({tv, TVCredits}) => {
               <div className="rates">{tv.vote_average}</div>
             </div>
             {
-              TVCredits && producers.length === false && (
+              TVCredits && producers.length === 0 ? '' : (
                 <div className='directors'>
                   <h3>EXECUTIVE PRODUCER{ TVCredits && producers.length > 1 ? 'S' : ''}</h3>
                   {TVCredits && producers.map((director) => (
@@ -38,6 +37,12 @@ const TVInfo = ({tv, TVCredits}) => {
               )
             }
           </div>
+
+         <div className='episode'>
+           <h3>LAST EPISODE AIRED</h3>
+           <h4>{`Season ${tv.number_of_seasons} Episode ${tv.last_episode_to_air.episode_number}`}</h4>
+           <p>{tv.last_episode_to_air.overview}</p>
+         </div>
         </Text>
       </Content>
     </Wrapper>

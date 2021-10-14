@@ -4,6 +4,7 @@ import { API_KEY, getSingleTVURL } from "../../APIFiles/APIKeys";
 import Spinner from '../HomePage/Spinner'
 import TVHeader from "./TVHeader";
 import TVInfo from "./TVInfo";
+import TVInfoBar from "./TVInfoBar";
 
 
 const SingleTV = () => {
@@ -26,6 +27,7 @@ const SingleTV = () => {
     { loading && <Spinner />}
     {data && <TVHeader title={data.name}/>}
     {data && <TVInfo tv={data} TVCredits={TVCredits}/>} 
+    {data && <TVInfoBar tv={data}/>}
     </>
    );
 }

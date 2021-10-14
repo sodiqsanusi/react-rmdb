@@ -4,6 +4,7 @@ import MovieHeader from './MovieHeader'
 import { API_KEY, getSingleMovieURL } from "../../APIFiles/APIKeys";
 import Spinner from "../HomePage/Spinner";
 import MovieInfo from "./MovieInfo";
+import MovieInfoBar from "./MovieInfoBar";
 
 
 const SingleMovie = () => {
@@ -22,6 +23,7 @@ const SingleMovie = () => {
     {loading && <Spinner />}
     {data && <MovieHeader title={data.title}/> }
     {data && <MovieInfo movie={data} movieCredits={movieCredits}/>}
+    {data && <MovieInfoBar movie={data}/>}
     </>
    );
 }

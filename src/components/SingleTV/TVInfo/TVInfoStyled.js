@@ -70,4 +70,7 @@ export const Text = styled.div`
    .directors{
      margin-left: 1.5em;
    }
+   .episode{
+    margin-top: 1em;
+   }
 `;
