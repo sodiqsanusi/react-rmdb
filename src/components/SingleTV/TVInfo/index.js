@@ -7,7 +7,6 @@ const TVInfo = ({tv, TVCredits}) => {
     var producers = TVCredits.crew.filter((onecrew) => {
       return onecrew.job === 'Executive Producer';
      })
-
      var backdrop = `${getImageURL}${tv.backdrop_path}` ;
   }
 
@@ -38,11 +37,19 @@ const TVInfo = ({tv, TVCredits}) => {
             }
           </div>
 
-         <div className='episode'>
-           <h3>LAST EPISODE AIRED</h3>
-           <h4>{`Season ${tv.number_of_seasons} Episode ${tv.last_episode_to_air.episode_number}`}</h4>
-           <p>{tv.last_episode_to_air.overview}</p>
-         </div>
+        { tv && !tv.last_episode_to_air ? (
+          <div className='episode'>
+          <h3>EPISODE TO BE AIRED</h3>
+          <h4>{`Season ${tv.number_of_seasons} Episode ${tv.next_episode_to_air.episode_number}`}</h4>
+          <p>{tv.next_episode_to_air.overview}</p>
+        </div>
+        ) : (
+          <div className='episode'>
+          <h3>LAST EPISODE AIRED</h3>
+          <h4>{`Season ${tv.number_of_seasons} Episode ${tv.last_episode_to_air.episode_number}`}</h4>
+          <p>{tv.last_episode_to_air.overview}</p>
+        </div>
+        ) }
         </Text>
       </Content>
     </Wrapper>

@@ -4,8 +4,7 @@ import { Wrapper, Content, ActorArticle } from "./TVActorsStyled";
 
 const TVActors = ({credits}) => {
   if (credits) {
-    var casts = credits.cast;
-    console.log(casts);     
+    var casts = credits.cast;   
   }
 
   if (credits && casts.length === 0) {
