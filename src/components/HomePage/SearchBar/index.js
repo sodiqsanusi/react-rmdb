@@ -17,7 +17,7 @@ const SearchBar = () => {
   return ( 
     <Wrapper htmlFor="searchQuery">
       <Content onSubmit={handleQuery}>
-        <SpanButton onClick={() => handleQuery}><img src={searchIcon} alt="" /></SpanButton>
+        <SpanButton onClick={() => handleQuery} aria-label="Click to search movie"><img src={searchIcon} alt="" /></SpanButton>
         <input
          id='searchQuery'
          required
