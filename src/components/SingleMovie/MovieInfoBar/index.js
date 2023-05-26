@@ -1,4 +1,4 @@
-import { Content, Wrapper, Text } from "./MovieInfoBarStyled";
+import { Content, Wrapper, Text, Button } from "./MovieInfoBarStyled";
 
 
 const MovieInfoBar = ({movie}) => {
@@ -18,10 +18,12 @@ const MovieInfoBar = ({movie}) => {
         return formatter.format(money);
        }
 
-
       var budget = cash(movie.budget)   
       var revenue = cash(movie.revenue)
       var runtime = movieDuration(movie.runtime)
+    }
+    const handleClick = () => {
+      
     }
 
   return ( 
@@ -37,6 +39,9 @@ const MovieInfoBar = ({movie}) => {
         <Text>
           Revenue : {revenue}
         </Text>
+        <Button onClick={handleClick}>
+          Save Movie For Offline
+        </Button>
       </Content>
       )}
     </Wrapper>

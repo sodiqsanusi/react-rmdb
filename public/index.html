@@ -31,4 +31,17 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script type="text/javascript">
+
+   /**
+   * Notice the check for the support of serviceworkers in the browser
+     before the registration of the service worker
+  */
+     if('serviceWorker' in navigator){
+       navigator.serviceWorker.register('/sw.js').then((sw) => {
+         console.log(sw)
+       })
+     }
+
+  </script>
 </html>

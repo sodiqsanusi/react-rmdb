@@ -37,6 +37,32 @@ export const Text = styled.article`
   
   @media (min-width: 559px) {
     flex-direction: row;
-    width: 30%;
+    width: 23%;
   }
+`;
+
+export const Button = styled.button`
+  border: none;
+  outline: none;
+  display: flex;
+  width: 100%;
+  font-size: var(--fontBig);
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: .5em 1em;
+  background-color: #ffa31a;
+  margin: .3em 0;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  @media (min-width: 559px) {
+    flex-direction: row;
+    width: 20%;
+  }
+  :hover,
+   :focus{
+     background-color: #ffa31abb;
+     transform: scale(0.98);
+   }
 `;
